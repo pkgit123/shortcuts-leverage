@@ -1,0 +1,49 @@
+# open a new .bash_profile file
+# when finished, at bash type "sbp" or "source .bash_profile"
+
+# Make terminal better
+alias f='pwd;open -a Finder ./'                            # opens current directory in finder
+alias ~="cd ~"                                         # ~:            Go Home
+alias nbp='nano .bash_profile'                         # open .bash_profile in nano text editor
+alias sbp='source .bash_profile'                       # activate changes to .bash_profile
+alias cls='clear'                                      # windows command to clear screen
+alias doc='cd ~/Documents'                             # navigate to Documents folder
+alias tbp='open -e .bash_profile'                      # opens the .bash_profile file with TextEdit
+alias jn='jupyter notebook'                            # opens Jupyter Notebook
+alias jl='jupyter lab'                                 # opens Jupyter Lab
+alias ll='ls -al'                                      # list files (including hidden) in long format
+# start the day with 5 Google Apps: gmail, calendar, sheets, doc, slides
+ga () {
+    open http://www.gmail.com
+    sleep 1s
+    open http://calendar.google.com
+    sleep 1s
+    open http://doc.google.com
+    sleep 1s
+    open http://sheets.google.com
+    sleep 1s
+    open http://slides.google.com
+}
+
+# github commands (instead of looking up, function to print these)
+gitcmd () {
+    echo '    Sample git commands:'
+    echo '    git pull'
+    echo '    git add -A'
+    echo '    git commit -m "message" '
+    echo '    git status'
+    echo '    git push'
+    echo '    to exit multi-line commit, type "[ESC] :wq" '
+    echo '    to remove file, type "git rm filename" '
+    echo '    to edit .gitignore file,'
+    echo '        $ ls -a'
+    echo '        $ open .gitignore'
+    echo '    gt is alias for navigating to local github tutorials folder
+    echo '    gh is alias for navigating to local github folder
+}
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/Users/peterkim/anaconda/bin:$PATH"
+export PATH=/usr/local/mysql/bin:$PATH
+
+export PATH="$HOME/.cargo/bin:$PATH"
